@@ -3,11 +3,17 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
 
+import postRoutes from './routes/posts.js';
+
 const app = express();
+
+app.use('/posts', postRoutes);
 
 app.use(express.json({limit: "30mb", extended: true}));
 app.use(express.urlencoded({limit: "30mb", extended: true}));
 app.use(cors());
+
+// URL copy pasted from the mongo db atlas account
 
 const CONNECTION_URL = 'mongodb+srv://prajj7:Prajwal@99@cluster0.g8g2z.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 
