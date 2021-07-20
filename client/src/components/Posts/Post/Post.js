@@ -9,7 +9,7 @@ import moment from 'moment';
 const Post = ({ post }) => {
     const classes = useStyles();
     return (
-        <Card className="classes.card">
+        <Card className={classes.card}>
             <CardMedia className={classes.media} image={post.selectedFile} title={post.title} />
             <div className={classes.overlay}>
                 <Typography variant="h6">{post.creator}</Typography>
@@ -17,7 +17,7 @@ const Post = ({ post }) => {
             </div>
             <div className={classes.overlay2}>
                 <Button style={{color: 'white'}} size="small" onClick={() => {}}>
-                    <MoreHorizIcon fontSize="default" />
+                    <MoreHorizIcon fontSize="medium" />
                 </Button>
             </div>
             <div className={classes.details}>
