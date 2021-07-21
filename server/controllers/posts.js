@@ -5,7 +5,7 @@ import PostMessage from "../models/postMessage.js";
 export const getPosts = async (req, res) => {
     try{
         const postMessages = await PostMessage.find();
-
+        console.log("FETCHING!!")
         res.status(200).json(postMessages);
     } catch(error) {
         res.status(404).json({messages : error.message});
@@ -18,6 +18,7 @@ export const createPost = async (req, res) => {
     const newPost = new PostMessage(post);
 
     try {
+        console.log("CREATING!!");
         await newPost.save();
         res.status(201).json(newPost);
     } catch(error) {
@@ -32,15 +33,16 @@ export const updatePost = async (req, res) => {
     if(!mongoose.Types.ObjectId.isValid(_id)) return res.status(404).send("No post with that id")
 
     const updatedPost = await PostMessage.findByIdAndUpdate(_id, {...post, _id}, {new: true});
-
+    console.log("UPDATING!!")
     res.json(updatedPost);
 }
 
 export const deletePost = async (req, res) => {
     const { id } = req.params;
 
-    if(!mongoose.Types.ObjectId.isValid(_id)) return res.status(404).send("No post with that id")
-
-    const deletePost = await PostMessage.findByIdAndRemove(id);
+    if(!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send("No post with that id")
+    // console.log("DELETE!!")
+    await PostMessage.findByIdAndRemove(id);
+    console.log("DELETING!!");
     res.json({ message: 'Post deleted successfully!!' });
 }
