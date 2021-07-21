@@ -49,4 +49,8 @@ export default makeStyles({
     display: 'flex',
     justifyContent: 'space-between',
   },
+  deleteBtn: {
+    marginLeft: 'auto',
+    marginRight: '5px',
+  },
 });

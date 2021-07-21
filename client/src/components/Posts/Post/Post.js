@@ -34,13 +34,13 @@ const Post = ({ post, setCurrentId }) => {
                     {post.message}
                 </Typography>
             </CardContent>
-            <CardActions>
+            <CardActions disableSpacing={true}>
                 <Button size="small" color="primary" onClick={() => {}}>
-                    <ThumbUpAltRoundedIcon fontSize="small" />
-                    Like 
+                    <ThumbUpAltRoundedIcon  fontSize="small" />
+                    Like&nbsp;&nbsp; 
                     {post.likeCount}
                 </Button>
-                <Button size="small" color="primary" onClick={() => {dispatch(deletePost(post._id))}}>
+                <Button className={classes.deleteBtn} size="small" color="primary" onClick={() => {dispatch(deletePost(post._id))}}>
                     <DeleteIcon fontSize="small" />
                     Delete 
                 </Button>
