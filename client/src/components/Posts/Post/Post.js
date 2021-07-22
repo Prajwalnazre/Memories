@@ -6,7 +6,7 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import moment from 'moment';
 import { useDispatch } from 'react-redux';
-import { deletePost } from '../../../actions/posts';
+import { deletePost, likePost } from '../../../actions/posts';
 
 const Post = ({ post, setCurrentId }) => {
     const dispatch = useDispatch();
@@ -35,9 +35,9 @@ const Post = ({ post, setCurrentId }) => {
                 </Typography>
             </CardContent>
             <CardActions disableSpacing={true}>
-                <Button size="small" color="primary" onClick={() => {}}>
+                <Button size="small" color="primary" onClick={() => dispatch(likePost(post._id))}>
                     <ThumbUpAltRoundedIcon  fontSize="small" />
-                    Like&nbsp;&nbsp; 
+                    &nbsp;&nbsp;Like&nbsp;&nbsp; 
                     {post.likeCount}
                 </Button>
                 <Button className={classes.deleteBtn} size="small" color="primary" onClick={() => {dispatch(deletePost(post._id))}}>
