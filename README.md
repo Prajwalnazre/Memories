@@ -57,7 +57,7 @@ Awesome, you are ready to run it locally and feel free to edit the code play. If
 
 ## Common Error 1
 
-![Error1](https://github.com/Prajwalnazre/Memories/blob/main/common%20errors/error1.jpeg)
+<img align="centre" src="https://github.com/Prajwalnazre/Memories/blob/main/common%20errors/error1.jpeg" height=300>
 
 You might face this error during the project development. While I am not sure what exactly cause the error, here is a solution in case you face the same.
 1. Delete node_modules files in both client and server directory
