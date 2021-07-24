@@ -1,2 +1,3 @@
 # Memories
-This project is made to learn the basics of React.
+This project is made as a part of learning MERN stack.
+
