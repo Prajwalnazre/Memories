@@ -54,3 +54,13 @@ const url2 = "http://localhost:5000/posts/create";
 ```
 
 Awesome, you are ready to run it locally and feel free to edit the code play. If you have any suggestions or query, do contact me!!
+
+## Common Error 1
+
+![Error1](https://github.com/Prajwalnazre/Memories/blob/main/common%20errors/error1.jpeg)
+
+You might face this error during the project development. While I am not sure what exactly cause the error, here is a solution in case you face the same.
+1. Delete node_modules files in both client and server directory
+2. Delete package-lock.json in both the directories
+3. Run ```npm cache clean clean --force``` in both the directories
+4. Install both client and server dependancies respectively
